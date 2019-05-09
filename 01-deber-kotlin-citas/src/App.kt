@@ -1,0 +1,4 @@
+
+fun main(){
+    Database.cargarEstablecimiento()
+}
