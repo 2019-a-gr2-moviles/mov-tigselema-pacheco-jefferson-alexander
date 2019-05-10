@@ -10,16 +10,25 @@ class Database {
         fun cargarEstablecimiento(){
             File(pathEstablecimientos).forEachLine {
                 val establecimiento = it.split(",")
-                establecimientos.add(Establecimiento(establecimiento[0].toInt(), establecimiento[1],establecimiento[2]))
+                this.establecimientos.add(Establecimiento(establecimiento[0].toInt(), establecimiento[1],establecimiento[2]))
             }
-
         }
 
         fun cargarCitas(){
             File(pathCitas).forEachLine {
                 val cita = it.split(",")
-                citas.add(Cita(cita[0].toInt(),cita[1],cita[2],cita[3].toInt()))
-            }
+                this.citas.add(Cita(cita[0].toInt(),cita[1],cita[2],cita[3].toInt()))
+                }
+        }
+
+        fun insertarEstablecimiento(establecimiento: Establecimiento){
+            val registro:String = "\n"+establecimiento.idEstablecimiento.toString()+","+establecimiento.nombreEstablecimiento+","+establecimiento.direccionEstablecimiento
+            File(pathEstablecimientos).appendText(registro)
+        }
+
+        fun insertarCitas(cita: Cita){
+            val registro: String = "\n"+cita.idCita+cita.fecha+cita.nombreUsuario+cita.idEstablecimiento
+            File(pathCitas).appendText(registro)
         }
 
     }

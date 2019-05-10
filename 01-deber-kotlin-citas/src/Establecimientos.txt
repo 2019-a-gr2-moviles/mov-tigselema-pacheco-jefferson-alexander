@@ -1,2 +1,4 @@
-1, "EPN", "Ladron de Guevara"
-2, "ESPE", "Sangolqui"
+1,EPN,Ladron de Guevara
+2,ESPE,Sangolqui
+3,Ute,Las Antenas
+4,UDLA,Rio Coca
