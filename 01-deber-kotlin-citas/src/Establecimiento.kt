@@ -8,4 +8,8 @@ class Establecimiento{
         this.nombreEstablecimiento = nombreEstablecimiento
         this.direccionEstablecimiento = direccionEstablecimiento
     }
+
+    override fun toString(): String {
+        return this.idEstablecimiento.toString()+","+this.nombreEstablecimiento+","+this.direccionEstablecimiento
+    }
 }

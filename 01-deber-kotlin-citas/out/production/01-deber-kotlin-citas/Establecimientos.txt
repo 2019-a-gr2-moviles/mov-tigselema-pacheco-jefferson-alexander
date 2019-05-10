@@ -2,3 +2,4 @@
 2,ESPE,Sangolqui
 3,Ute,Las Antenas
 4,UDLA,Rio Coca
+7, USFQ,Al Norte

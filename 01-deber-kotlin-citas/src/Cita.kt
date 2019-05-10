@@ -10,4 +10,8 @@ class Cita {
         this.nombreUsuario = nombreUsuario
         this.idEstablecimiento = idEstablecimiento
     }
+
+    override fun toString(): String {
+        return this.idCita.toString()+","+this.fecha+","+this.nombreUsuario+","+this.idEstablecimiento.toString()
+    }
 }

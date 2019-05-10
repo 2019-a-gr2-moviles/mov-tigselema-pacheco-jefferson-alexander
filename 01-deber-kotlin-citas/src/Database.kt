@@ -27,7 +27,7 @@ class Database {
         }
 
         fun insertarCitas(cita: Cita){
-            val registro: String = "\n"+cita.idCita+cita.fecha+cita.nombreUsuario+cita.idEstablecimiento
+            val registro: String = "\n"+cita.idCita.toString()+","+cita.fecha+","+cita.nombreUsuario+","+cita.idEstablecimiento
             File(pathCitas).appendText(registro)
         }
 
