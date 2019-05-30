@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btn_parce.setOnClickListener{irAParcelable()}
+        btn_adapter.setOnClickListener{irAListView()}
+
     }
 
     fun irAParcelable(){
@@ -19,6 +21,14 @@ class MainActivity : AppCompatActivity() {
         val alexander = Usuario("Alexander",29, Date(), 35.00 )
         intentExplicito.putExtra("usuario", alexander);
         val cachetes = Mascota("cachetes", alexander)
+        startActivity(intentExplicito)
+    }
+
+    fun irAListView(){
+        val intentExplicito = Intent(
+            this,
+            ListViewActivity::class.java
+        )
         startActivity(intentExplicito)
     }
 }
