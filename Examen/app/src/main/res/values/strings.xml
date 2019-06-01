@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Examen</string>
+    <string name="nombre_usuario_ph">Ingrese su nombre</string>
+    <string name="lbl_btn_ingresar">Ingresar</string>
+    <string name="lbl_btn_gestionar_papas">Gestionar Actores</string>
+    <string name="lbl_btn_crear_papas">Crear Actor</string>
+    <string name="txt_lbl_crear_actor">Crear nuevo actor</string>
+    <string name="lbl_txt_crear_actor_nombre">Nombres</string>
+    <string name="lbl_txt_crear_actor_apellidos">Apellidos</string>
+    <string name="lbl_txt_crear_actor_fn">Fecha Nacimiento</string>
+    <string name="lbl_txt_crear_actor_num_peliculas">Numero Peliculas</string>
+    <string name="lbl_txt_crear_actor_retirado">Retirado</string>
+    <string name="lbl_btn_guardar">Guardar</string>
+</resources>
