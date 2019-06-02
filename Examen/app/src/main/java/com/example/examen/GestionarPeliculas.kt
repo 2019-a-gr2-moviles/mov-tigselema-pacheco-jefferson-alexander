@@ -19,13 +19,14 @@ class GestionarPeliculas : AppCompatActivity() {
         lv_peliculas.adapter = adapter
         
         lv_peliculas.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            irASeleccionHijo(position)
+            irASeleccionHijo(position, idActor)
         }
     }
 
-    fun irASeleccionHijo(position:Int){
+    fun irASeleccionHijo(position:Int, idActor:Int){
         val intentExplicito = Intent(this, SeleccionHijo::class.java)
         intentExplicito.putExtra("posicion",position)
+        intentExplicito.putExtra("idActor",idActor)
         startActivity(intentExplicito)
     }
 

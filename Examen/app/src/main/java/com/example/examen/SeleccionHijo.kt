@@ -13,8 +13,9 @@ class SeleccionHijo : AppCompatActivity() {
         setContentView(R.layout.activity_seleccion_hijo)
 
         val posicion = this.intent.getIntExtra("posicion",-1)
-        if(posicion>-1){
-            peliculaTemporal = Database.peliculas.get(posicion)
+        val idActor = this.intent.getIntExtra("idActor",-1)
+        if(posicion>-1 || idActor<-1){
+            peliculaTemporal = Database.peliculas.filter { it.actorId==idActor }.get(posicion)
             txt_pelicula_nombre2.setText(peliculaTemporal.nombre)
             txt_pelicula_anio_l2.setText(peliculaTemporal.anioLanzamiento.toString())
             txt_pelicula_rating2.setText(peliculaTemporal.rating.toString())
@@ -25,12 +26,13 @@ class SeleccionHijo : AppCompatActivity() {
         }
 
         btn_eliminar_pelicula.setOnClickListener {
-            eliminarPelicula(posicion)
+            eliminarPelicula(posicion,peliculaTemporal)
             irGestionarHijo(peliculaTemporal.actorId)
         }
 
         btn_actualizar_pelicula.setOnClickListener {
             actualizarPelicula(
+                idActor,
                 posicion,
                 txt_pelicula_nombre2.text.toString(),
                 txt_pelicula_anio_l2.text.toString().toInt(),
@@ -38,6 +40,7 @@ class SeleccionHijo : AppCompatActivity() {
                 txt_pelicula_actores2.text.toString(),
                 txt_pelicula_sinopsis2.text.toString()
             )
+            irGestionarHijo(peliculaTemporal.actorId)
         }
     }
 
@@ -47,15 +50,15 @@ class SeleccionHijo : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
-    fun eliminarPelicula(position:Int){
-        Database.peliculas.removeAt(position)
+    fun eliminarPelicula(position:Int, pelicula:Pelicula){
+        Database.peliculas.remove(pelicula)
     }
 
-    fun actualizarPelicula(position: Int, nombre:String, anio:Int, rating:Int, actores:String, sinopsis:String){
-        Database.peliculas[position].nombre = nombre
-        Database.peliculas[position].anioLanzamiento = anio
-        Database.peliculas[position].rating = rating
-        Database.peliculas[position].actoresPrincipales = actores
-        Database.peliculas[position].sinopsis =  sinopsis
+    fun actualizarPelicula(idActor: Int,position: Int, nombre:String, anio:Int, rating:Int, actores:String, sinopsis:String){
+        Database.peliculas.filter { it.actorId==idActor }[position].nombre = nombre
+        Database.peliculas.filter { it.actorId==idActor }[position].anioLanzamiento = anio
+        Database.peliculas.filter { it.actorId==idActor }[position].rating = rating
+        Database.peliculas.filter { it.actorId==idActor }[position].actoresPrincipales = actores
+        Database.peliculas.filter { it.actorId==idActor }[position].sinopsis =  sinopsis
     }
 }
