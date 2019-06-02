@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test</string>
+    <string name="nombre_usuario_ph">Your Name</string>
+    <string name="lbl_btn_ingresar">Enter</string>
+    <string name="lbl_btn_gestionar_papas">Manage Actors</string>
+    <string name="lbl_btn_crear_papas">Create Actor</string>
+    <string name="txt_lbl_crear_actor">Create new actor</string>
+    <string name="lbl_txt_crear_actor_nombre">First Name</string>
+    <string name="lbl_txt_crear_actor_apellidos">Last Name</string>
+    <string name="lbl_txt_crear_actor_fn">Birthday</string>
+    <string name="lbl_txt_crear_actor_num_peliculas">Number of Movies</string>
+    <string name="lbl_txt_crear_actor_retirado">Retired</string>
+    <string name="lbl_btn_guardar">Save</string>
+    <string name="lbl_btn_eliminar">Remove</string>
+    <string name="lbl_btn_actualizar">Update</string>
+    <string name="lbl_btn_gestionar_hijo">Manage Movies</string>
+    <string name="lbl_btn_crear_hijo">Create Movies</string>
+    <string name="txt_lbl_crear_pelicula">Create new Movies</string>
+    <string name="lbl_txt_crear_pelicula_nombre">Name</string>
+    <string name="lbl_txt_crear_pelicula_anio_l">Release Year</string>
+    <string name="lbl_txt_crear_pelicula_rating">Rating</string>
+    <string name="lbl_txt_crear_pelicula_actores">Main Actors</string>
+    <string name="lbl_txt_crear_pelicula_sinopsis">Sinopsis</string>
+</resources>

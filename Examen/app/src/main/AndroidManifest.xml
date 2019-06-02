@@ -9,6 +9,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".SeleccionHijo">
+        </activity>
+        <activity android:name=".GestionarPeliculas">
+        </activity>
+        <activity android:name=".CrearPeliculas">
+        </activity>
+        <activity android:name=".SelectPapa">
+        </activity>
         <activity android:name=".CrearActores">
         </activity>
         <activity android:name=".GestionarActores">

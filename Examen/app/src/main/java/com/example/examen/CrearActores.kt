@@ -15,11 +15,12 @@ class CrearActores : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_actores)
         btn_guardar.setOnClickListener {
-            Database.actores.add(Actor(txt_nombre_actor.text.toString(),
+            val id = if (Database.actores.isEmpty())  0 else Database.actores.last().idActor+1
+            Database.actores.add(Actor(id,txt_nombre_actor.text.toString(),
                                         txt_apellido_actor.text.toString(),
                 txt_fn_actor.text.toString(),
                 txt_num_peliculas_actor.text.toString().toInt(),
-                sw_retirado_actor.text=="Retirado"))
+                sw_retirado_actor.isChecked))
             Snackbar.make(it, "El elemento ha sido creado por ${Database.nombreUsuario}", Snackbar.LENGTH_LONG).setAction("Action",null).show()
             irMenu()
 

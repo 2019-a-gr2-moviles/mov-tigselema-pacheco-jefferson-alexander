@@ -4,6 +4,7 @@ import java.time.LocalDate
 import java.util.*
 
 class Actor{
+    var idActor: Int
     var nombres:String
     var apellidos:String
     var fechaNacimiento: String
@@ -11,12 +12,14 @@ class Actor{
     var retirado:Boolean
 
     constructor(
+        idActor: Int,
         nombres: String,
         apellidos: String,
         fechaNacimiento: String,
         numeroPeliculas: Int,
         retirado: Boolean
     ) {
+        this.idActor = idActor
         this.nombres = nombres
         this.apellidos = apellidos
         this.fechaNacimiento = fechaNacimiento

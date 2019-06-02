@@ -11,4 +11,14 @@
     <string name="lbl_txt_crear_actor_num_peliculas">Numero Peliculas</string>
     <string name="lbl_txt_crear_actor_retirado">Retirado</string>
     <string name="lbl_btn_guardar">Guardar</string>
+    <string name="lbl_btn_eliminar">Eliminar</string>
+    <string name="lbl_btn_actualizar">Actualizar</string>
+    <string name="lbl_btn_gestionar_hijo">Gestionar Peliculas</string>
+    <string name="lbl_btn_crear_hijo">Crear Pelicula</string>
+    <string name="txt_lbl_crear_pelicula">Crear nueva Pelicula</string>
+    <string name="lbl_txt_crear_pelicula_nombre">Nombre</string>
+    <string name="lbl_txt_crear_pelicula_anio_l">Año de Lanzamiento</string>
+    <string name="lbl_txt_crear_pelicula_rating">Rating</string>
+    <string name="lbl_txt_crear_pelicula_actores">Actores Principales</string>
+    <string name="lbl_txt_crear_pelicula_sinopsis">Sinopsis</string>
 </resources>
