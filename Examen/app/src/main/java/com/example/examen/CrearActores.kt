@@ -29,7 +29,6 @@ class CrearActores : AppCompatActivity() {
 
     fun irMenu(){
         val intentExplicito = Intent(this, MenuApp::class.java)
-        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 
