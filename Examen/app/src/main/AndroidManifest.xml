@@ -9,17 +9,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".SeleccionHijo">
+        <activity android:name=".SeleccionHijo" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".GestionarPeliculas">
+        <activity android:name=".GestionarPeliculas" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".CrearPeliculas">
+        <activity android:name=".CrearPeliculas" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".SelectPapa">
+        <activity android:name=".SelectPapa" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".CrearActores">
+        <activity android:name=".CrearActores" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".GestionarActores">
+        <activity android:name=".GestionarActores" android:launchMode="singleTop">
         </activity>
         <activity android:name=".MenuApp">
         </activity>

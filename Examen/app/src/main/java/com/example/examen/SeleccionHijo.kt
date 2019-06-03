@@ -47,6 +47,7 @@ class SeleccionHijo : AppCompatActivity() {
     fun irGestionarHijo(idActor: Int){
         val intentExplicito = Intent(this, GestionarPeliculas::class.java)
         intentExplicito.putExtra("idActor", idActor)
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 

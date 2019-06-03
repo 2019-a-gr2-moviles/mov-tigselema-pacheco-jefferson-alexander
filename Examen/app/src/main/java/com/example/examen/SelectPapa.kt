@@ -39,6 +39,7 @@ class SelectPapa : AppCompatActivity() {
                 txt_fn_actor2.text.toString(),
                 txt_num_peliculas_actor2.text.toString().toInt(),
                 sw_retirado_actor2.isChecked)
+            irGestionarPapa()
         }
 
         btn_crear_pelicula.setOnClickListener {
@@ -71,12 +72,14 @@ class SelectPapa : AppCompatActivity() {
         val intentExplicito = Intent(this, CrearPeliculas::class.java)
         intentExplicito.putExtra("idActor", idActor)
         intentExplicito.putExtra("posicion", posicion)
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 
     fun irGestionarHijo(idActor: Int){
         val intentExplicito = Intent(this, GestionarPeliculas::class.java)
         intentExplicito.putExtra("idActor", idActor)
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 }

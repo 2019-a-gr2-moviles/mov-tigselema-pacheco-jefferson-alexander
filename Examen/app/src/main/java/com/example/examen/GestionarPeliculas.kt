@@ -33,6 +33,7 @@ class GestionarPeliculas : AppCompatActivity() {
     fun irGestionarPapa() {
         val intentExplicito = Intent(this, GestionarActores::class.java)
         startActivity(intentExplicito)
+
     }
 
 }

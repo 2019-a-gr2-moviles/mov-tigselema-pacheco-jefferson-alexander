@@ -23,6 +23,7 @@ class GestionarActores : AppCompatActivity() {
     fun irASeleccionPapa(position:Int){
         val intentExplicito = Intent(this, SelectPapa::class.java)
         intentExplicito.putExtra("posicion",position)
+        intentExplicito.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentExplicito)
     }
 }
